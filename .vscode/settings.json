@@ -1,0 +1,26 @@
+{
+  // =========================
+  // LTeX / LanguageTool
+  // =========================
+  "ltex.enabled": true,
+  "ltex.language": "de-DE",
+  "ltex.diagnostics": {
+    "enable": true
+  },
+
+  // Wörterbuch & Projektwörter
+  "ltex.dictionary": {
+    "de-DE": ["Bachelorarbeit", "Masterarbeit", "Biber", "Latexmk"]
+  },
+
+  // Ignoriere bestimmte LaTeX-Umgebungen und Befehle
+  "ltex.ignoreEnvironments": [
+    "equation", "align", "tabular", "lstlisting", "tikzpicture"
+  ],
+  "ltex.ignoreCommands": [
+    "cite", "ref", "label", "eqref", "url", "includegraphics"
+  ],
+
+  // Optional: Englisches Abstract gleichzeitig prüfen
+  // "ltex.language": "de-DE,en-US"
+}
