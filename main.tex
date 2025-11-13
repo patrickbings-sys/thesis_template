@@ -1,0 +1,118 @@
+% Dokumentenklasse -----------------------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 12pt]{scrreprt} % Dokumentenklasse für Berichte im KOMA-Script-Stil
+
+% Einrückung entfernen und Absatzabstand setzen
+\setlength{\parindent}{0em} % Entfernt die Einrückung für Absätze
+\setlength{\parskip}{1em}   % Setzt einen Abstand von 1em zwischen Absätzen
+
+% Pakete ---------------------------------------------------------------------------------------------------------------
+\usepackage[left=3cm, right=2cm,top=2cm, bottom=3cm]{geometry}   % Anpassung der Seitenränder
+\usepackage[utf8]{inputenc}   % Ermöglicht die Verwendung von UTF-8 Zeichenkodierung
+\usepackage[ngerman]{babel}   % Sprachunterstützung für Deutsch, inklusive Trennregeln und Datum
+\usepackage{csquotes} % Hinzufügen des csquotes-Pakets für bessere Handhabung von Zitaten
+\usepackage[T1]{fontenc}   % Verwendung von T1-Schriftkodierung für bessere Ausgabequalität
+\usepackage{graphicx}   % Einbindung von Grafiken
+\usepackage{verbatim}
+\usepackage{pmboxdraw}
+\graphicspath{{img/}}   % Pfad zu den Grafikdateien
+\usepackage{lmodern}   % Verwendung der Latin Modern Schriftart
+% \usepackage{mathptmx}  % Verwendung von Times New Roman Schriftart
+\usepackage{color}   % Farbunterstützung
+\usepackage{xcolor}   % Farbunterstützung
+\usepackage[printonlyused, withpage]{acronym}   % Verwaltung von Abkürzungen
+\usepackage{pdfpages}    % Einbindung von kompletten PDF-Seiten
+\usepackage{float}   % Bessere Kontrolle über die Platzierung von Gleitobjekten (z.B. Bilder, Tabellen)
+\usepackage{placeins}
+\usepackage{array, ragged2e, tabularx}  % Bessere Kontrolle über Tabellen
+\usepackage{makecell}
+\usepackage{lipsum}
+\usepackage[font=small]{caption}   % Anpassung von Bild- und Tabellenunterschriften
+\usepackage{subcaption}   % Unterstützung von Unterbeschriftungen für Bilder und Tabellen
+\usepackage[
+    pdftitle={TITEL EINFÜGEN}, % Setzt den Titel des PDFs
+    pdfsubject={},   % Setzt das Thema des PDFs (hier leer gelassen)
+    pdfauthor={Nick Fischer}, % Setzt den Autor des PDFs
+    pdfkeywords={},  % Setzt die Schlüsselwörter des PDFs (hier leer gelassen)
+    hidelinks        % Verhindert die Einrahmung von Links
+]{hyperref}
+\renewcommand{\UrlFont}{\rmfamily}  % Schriftart der URLs wie die normale Schriftart
+\usepackage{amsmath, amssymb}   % Erweiterte mathematische Umgebungen und Symbole
+\usepackage{scrhack}  % Korrekturen für die Verwendung bestimmter Pakete mit KOMA-Script-Klassen
+
+% TODO: Prüfen, ob das hier nicht besser Kapitel statt Abschn. heißen sollte
+\addto\extrasngerman{\def\figureautorefname{Abb.}} % ersetzt Abbildung durch Abb. bei der referenzierung
+\addto\extrasngerman{\def\sectionautorefname{Kapitel}} % erstetzen durch Kapitel bei der referenzierung
+\addto\extrasngerman{\def\subsectionautorefname{Kapitel}} % erstetzen durch Kapitel bei der referenzierung
+
+% Zeilenumbrüche -------------------------------------------------------------------------------------------------------
+% \hyphenation{
+
+% }
+
+% Literaturverzeichnis -------------------------------------------------------------------------------------------------
+\usepackage[backend=biber, 
+			style=ieee,
+			doi=true,
+			url=false,
+			eprint=false]{biblatex} 
+\addbibresource{literature/Literaturverzeichnis.bib} % Pfad zur .bib-Datei 
+
+% Formelverzeichnis ----------------------------------------------------------------------------------------------------
+\makeatletter
+\newcommand{\formelref}[1]{Formel~\textup{\tagform@{\ref{#1}}}}
+\makeatother
+
+% Kopf- und Fußzeilenanpassung -----------------------------------------------------------------------------------------
+\usepackage[autooneside,headsepline]{scrlayer-scrpage}
+\automark[chapter]{chapter}
+\clearpairofpagestyles
+\ihead{\headmark} 		
+\ofoot[\pagemark]{\pagemark}
+
+% Dokumentenbeginn -----------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+	\pagenumbering{Roman}
+
+	\include{chapters/00_Titel} % Einbindung der Titelseite
+
+	\includepdf[
+		pages={1},
+		scale=0.95, 
+		pagecommand={\thispagestyle{plain}}
+	]{img/Allgemein/Aufgabenstellung.pdf} % Einbinden der Aufgabenstellung
+	
+	\include{chapters/01_Eides_Statt} % Einbindung der Versicherugn an Eides Statt
+
+	\include{chapters/02_Zusammenfassung} % Einbindung der Zusammenfassung
+	
+	\tableofcontents  % Einbinden des Inhaltsverzeichnisses
+	\newpage
+
+	\listoffigures  % Einbinden des Abbildungsverzeichnisses
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+	\newpage
+	
+	\listoftables  % Einbinden des Tabellenverzeichnisses
+	\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+	\newpage
+
+	% \listof{formula}{Formelverzeichnis} % Einbinden des Formelverzeichnisses
+	% \newpage
+
+	\include{chapters/03_Abkürzungsverzeichnis} % Einbinden des Abkürzungsverzeichnisses
+
+	% \mainmatter
+	\cleardoubleoddpage
+	\pagenumbering{arabic}
+	
+	\include{chapters/04_Einleitung} % Einbindung der Einleitung
+
+	% Literaturverzeichnis
+	\printbibliography  % Einbinden des Literaturverzeichnis
+	
+\end{document}
+
+% Dokumentenende -------------------------------------------------------------------------------------------------------

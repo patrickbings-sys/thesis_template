@@ -1,0 +1,22 @@
+# Build-Ordner
+build/
+
+# latexmk / TeX-Hilfsdateien
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+
+# Editor-/OS-Kleinkram
+.DS_Store
+.vscode/*
+!.vscode/settings.json
