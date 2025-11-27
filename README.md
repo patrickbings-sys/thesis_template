@@ -2,7 +2,6 @@
 
 Gehe zur main.tex und stelle die grundlegenden Dokumenteneigenschaften ein. Dies sind meistens Vorgaben von dem jeweiligen Lehrstuhl. 
     Die einzelnen Einstellungen sind in der main.tex Zeile für Zeile kommentiert, sodass man von oben nach unten durchgehen kann und ggf. Änderungen vornehmen kann, um das Dokument an seine Bedingungen anzupassen.
-
     Hier besonders hervorzuheben ist die Einstellung der Schriftgröße in Zeile 3, die Angabe, wie Referenziert werden soll in den Zeilen 44 - 46 und die Art der Literatur-Referenzierung in Zeile 55 (Hier Standardmäßig IEEE)
 
 Grundsätzlich ist die main.tex sozusagen die Hauptplattform für das Dokument, hier wird dem Programm gesagt was und wie es geladen werden soll. Das eigentliche PDF beginnt also mit dem Kommando in Zeile 75.
