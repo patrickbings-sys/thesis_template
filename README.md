@@ -30,7 +30,7 @@ Dadruch ergibt sich dann eine Einteilung, die wiefolgt aussieht:
             ...
 2. Kapitel 2
 
-```text
+```
 
 Alle Grafiken, die in die Arbeit eingebettet werden sollen befinden sich in dem Unterordner img.
 Es empfiehlt sich die Bilder im Vorhinein so zu Formatieren, dass das Bild keine Weißen Ränder mehr hat und genau zugeschnitten wurde. So sieht es am Ende in dem PDF am Besten aus. Alle gängigen Bildformate sollten unterstützt werden. Wie das Einfügen von Grafiken genau geht sollte im einzelnen nachgeschlagen werden (LaTeX Dokumentation, oder ChatGPT helfen hier enorm).
