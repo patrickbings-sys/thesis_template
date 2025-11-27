@@ -1,5 +1,4 @@
 # How to Use
-```text
 
 Gehe zur main.tex und stelle die grundlegenden Dokumenteneigenschaften ein. Dies sind meistens Vorgaben von dem jeweiligen Lehrstuhl. 
     Die einzelnen Einstellungen sind in der main.tex Zeile für Zeile kommentiert, sodass man von oben nach unten durchgehen kann und ggf. Änderungen vornehmen kann, um das Dokument an seine Bedingungen anzupassen.
@@ -21,6 +20,8 @@ Unterkapitel werden innerhalb des \chapter mit \section{Name des Unterkapitels} 
 
 Dadruch ergibt sich dann eine Einteilung, die wiefolgt aussieht:
 
+```text
+
 1. Kapitel 1
     1.1 Unterkapitel 1
     1.2 Unterkapitel 2
@@ -28,6 +29,8 @@ Dadruch ergibt sich dann eine Einteilung, die wiefolgt aussieht:
         ...
             ...
 2. Kapitel 2
+
+```text
 
 Alle Grafiken, die in die Arbeit eingebettet werden sollen befinden sich in dem Unterordner img.
 Es empfiehlt sich die Bilder im Vorhinein so zu Formatieren, dass das Bild keine Weißen Ränder mehr hat und genau zugeschnitten wurde. So sieht es am Ende in dem PDF am Besten aus. Alle gängigen Bildformate sollten unterstützt werden. Wie das Einfügen von Grafiken genau geht sollte im einzelnen nachgeschlagen werden (LaTeX Dokumentation, oder ChatGPT helfen hier enorm).
