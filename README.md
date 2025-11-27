@@ -47,10 +47,8 @@ Weiterführende ein paar der wichtigsten Kommandos in LaTeX und deren Funktion.
 3. \subsection{} -> Neues Unterunterkapitel
 4. \label{Name des Labels} -> ordnet ein Label zu auf dass man sich später beziehen kann
 z.B. 
-
 \chapter{Einleitung}
 \label(chap\Einleitung)
-
 Hier wird ein Label: chap\Einleitung erstellt, so kann man im späteren Verlauf einfach auf deses Kapitel referenzieren indem man das Label verwendet.
 Label werden für alles ertellt: Kapitel, Unterkapitel, Bilder, Tabellen, usw. Kurz gesagt, alles worauf man in dem Tex möglicherweise verweisen möcht muss ein Label bekommen.
 5. \cite{Nambe der Referenz} -> erstellt eine Referenzierung
