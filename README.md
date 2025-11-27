@@ -15,8 +15,8 @@ Sollten einzelne Inhalte nicht gebraucht werden, können die zughörigen Zeilen 
 Der Eigentliche Ihnhalt der Arbeit findet sich in den Chapern wieder, diese sind extra in dem Unterordner chapters zu finden und die Unterteilung der einzelnen Files ist der Struktur der eigenen Arbeit zu entnehmen.
 Dort kann für jedes Kapitel in der Arbeit eine neue Datei mit dem jeweiligen Kapitelnamen angelegt werden.
 
-Jedes Chapter fängt mit dem Kommando \chapter{Name des Kapitels} an, dadruch weiß LaTeX, dass es sich um ein Kapitel handelt und kann es dementsprechend einfügen.
-Unterkapitel werden innerhalb des \chapter mit \section{Name des Unterkapitels} angegeben und weitere Einrückungen mit \subsection{}, \subsubsection{} usw.
+Jedes Chapter fängt mit dem Kommando ```\chapter{Name des Kapitels}``` an, dadruch weiß LaTeX, dass es sich um ein Kapitel handelt und kann es dementsprechend einfügen.
+Unterkapitel werden innerhalb des ```\chapter``` mit ```\section{Name des Unterkapitels}``` angegeben und weitere Einrückungen mit ```\subsection{}```, ```\subsubsection{}``` usw.
 
 Dadruch ergibt sich dann eine Einteilung, die wiefolgt aussieht:
 
@@ -42,18 +42,17 @@ In dieser datei befinden sich alle Referenzen in dem BibLaTeX Format.
 Um die Referenzen in diesem Format einfah zu erhalten empfiehlt sich ein Literaturprogramm wie z.B. Zotero oder Citavi, welche ihre Bibliotheken einfach in diesem Format exportieren können. Dabei ist es nicht relevant ob in der Datei Referenzen vorkommen, die in der Arbeit nicht verwendet werden, da in dem Litreturverzeichnis nur diese Aufgeführt werdenm, welche auch in dem Text referenziert wurden.
 
 Weiterführende ein paar der wichtigsten Kommandos in LaTeX und deren Funktion.
-1. \chapter{Name des Kapitels} -> Erstellt ein neues Kapitel
-2. \section{Name der Unterkapitels} -> Erstellt ein neues Unterkapitel
-3. \subsection{} -> Neues Unterunterkapitel
-4. \label{Name des Labels} -> ordnet ein Label zu auf dass man sich später beziehen kann
+1. ```\chapter{Name des Kapitels}``` -> Erstellt ein neues Kapitel
+2. ```\section{Name der Unterkapitels}``` -> Erstellt ein neues Unterkapitel
+3. ```\subsection{}``` -> Neues Unterunterkapitel
+4. ```\label{Name des Labels}``` -> ordnet ein Label zu auf dass man sich später beziehen kann
 z.B. 
-\chapter{Einleitung}
-\label(chap\Einleitung)
+```\chapter{Einleitung} &nbsp \label(chap\Einleitung)```
 Hier wird ein Label: chap\Einleitung erstellt, so kann man im späteren Verlauf einfach auf deses Kapitel referenzieren indem man das Label verwendet.
 Label werden für alles ertellt: Kapitel, Unterkapitel, Bilder, Tabellen, usw. Kurz gesagt, alles worauf man in dem Tex möglicherweise verweisen möcht muss ein Label bekommen.
-5. \cite{Nambe der Referenz} -> erstellt eine Referenzierung
-6. \autoref{Name des Labels} -> erstellt eine Referenzierung zu einem Label
-7. \ac{} und \acp{} -> Fügt eine vorher Definierte Abkürzung ein, sodass dies immer Einheitlich ist und auf das Abkürzungsverzeichnis referenziert.
+5. ```\cite{Nambe der Referenz}``` -> erstellt eine Referenzierung
+6. ```\autoref{Name des Labels}``` -> erstellt eine Referenzierung zu einem Label
+7. ```\ac{}``` und ```\acp{}``` -> Fügt eine vorher Definierte Abkürzung ein, sodass dies immer Einheitlich ist und auf das Abkürzungsverzeichnis referenziert.
 
 Hierzu muss die Abkürzung vorher in Abkürzungsverzeichnis.tex definiert werden (Beispiele wie as aussehen kann sind in der Datei enthalten)
 
@@ -61,4 +60,4 @@ Hierzu muss die Abkürzung vorher in Abkürzungsverzeichnis.tex definiert werden
 
 
 Eine gute Einführung wie man Bilder ordentlich in LaTeX einfügt findest du hier: https://www.learnlatex.org/de/lesson-07
-Dort findet man darüber hinaus auch zu anderen Bereichen schnelle und übersichtliche infos (ansonsten kann ChatGPT das im großen und ganzen auch alles :)).
+Dort findet man darüber hinaus auch zu anderen Bereichen schnelle und übersichtliche infos (ansonsten kann ChatGPT das im großen und ganzen auch alles).
