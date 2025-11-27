@@ -1,4 +1,5 @@
 # How to Use
+```text
 
 Gehe zur main.tex und stelle die grundlegenden Dokumenteneigenschaften ein. Dies sind meistens Vorgaben von dem jeweiligen Lehrstuhl. 
     Die einzelnen Einstellungen sind in der main.tex Zeile für Zeile kommentiert, sodass man von oben nach unten durchgehen kann und ggf. Änderungen vornehmen kann, um das Dokument an seine Bedingungen anzupassen.
@@ -20,7 +21,6 @@ Unterkapitel werden innerhalb des \chapter mit \section{Name des Unterkapitels} 
 
 Dadruch ergibt sich dann eine Einteilung, die wiefolgt aussieht:
 
-```text
 1. Kapitel 1
     1.1 Unterkapitel 1
     1.2 Unterkapitel 2
