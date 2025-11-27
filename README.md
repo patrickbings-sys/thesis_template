@@ -20,7 +20,7 @@ Unterkapitel werden innerhalb des \chapter mit \section{Name des Unterkapitels} 
 
 Dadruch ergibt sich dann eine Einteilung, die wiefolgt aussieht:
 
-'''text
+```text
 1. Kapitel 1
     1.1 Unterkapitel 1
     1.2 Unterkapitel 2
