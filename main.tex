@@ -53,10 +53,16 @@
 % Literaturverzeichnis -------------------------------------------------------------------------------------------------
 \usepackage[backend=biber, 
 			style=ieee,
-			doi=true,
+			citestyle=ieee-comp,
+			sortcites=true,
+			doi=false,
+			isbn=false,
 			url=false,
 			eprint=false]{biblatex} 
-\addbibresource{literature/Literaturverzeichnis.bib} % Pfad zur .bib-Datei 
+
+
+\addbibresource{literature/Literatur.bib} % Pfad zur .bib-Datei 
+
 
 % Formelverzeichnis ----------------------------------------------------------------------------------------------------
 \makeatletter
@@ -78,11 +84,11 @@
 
 	\include{chapters/00_Titel} % Einbindung der Titelseite
 
-	\includepdf[
-		pages={1},
-		scale=0.95, 
-		pagecommand={\thispagestyle{plain}}
-	]{img/Allgemein/Aufgabenstellung.pdf} % Einbinden der Aufgabenstellung
+	% \includepdf[
+	% 	pages={1},
+	% 	scale=0.95, 
+	% 	pagecommand={\thispagestyle{plain}}
+	% ]{img/Allgemein/Aufgabenstellung.pdf} % Einbinden der Aufgabenstellung
 	
 	\include{chapters/01_Eides_Statt} % Einbindung der Versicherugn an Eides Statt
 
