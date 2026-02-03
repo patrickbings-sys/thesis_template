@@ -4,9 +4,9 @@ Gehe zur main.tex und stelle die grundlegenden Dokumenteneigenschaften ein. Dies
     Die einzelnen Einstellungen sind in der main.tex Zeile für Zeile kommentiert, sodass man von oben nach unten durchgehen kann und ggf. Änderungen vornehmen kann, um das Dokument an seine Bedingungen anzupassen.
     Hier besonders hervorzuheben ist die Einstellung der Schriftgröße in Zeile 3, die Angabe, wie Referenziert werden soll in den Zeilen 44 - 46 und die Art der Literatur-Referenzierung in Zeile 55 (Hier Standardmäßig IEEE)
 
-Grundsätzlich ist die main.tex sozusagen die Hauptplattform für das Dokument, hier wird dem Programm gesagt was und wie es geladen werden soll. Das eigentliche PDF beginnt also mit dem Kommando in Zeile 75.
+Grundsätzlich ist die main.tex sozusagen die Hauptplattform für das Dokument, hier wird dem Programm gesagt was und wie es geladen werden soll. Die eigentliche PDF beginnt also mit dem Kommando in Zeile 75.
 
-Mit dem ```\include{}``` Befehl werden Teile zu dem PDF hinzugefügt, damit die einzelnen Abschnitte des Dokumentes übersichtlich in einzelnen Files bearbeitet werden kann. (Jedes Chapter hat eine eigene .tex File in der dann der eigentlich Inhalt der Arbeit steht).
+Mit dem ```\include{}``` Befehl werden Teile zu dem PDF hinzugefügt, damit die einzelnen Abschnitte des Dokumentes übersichtlich in einzelnen Files bearbeitet werden kann. (Jedes Chapter hat eine eigene .tex File in der dann der eigentliche Inhalt der Arbeit steht).
 
 Standardmäßig ist das Dokument auf ein wissenschaftliches Paper eingestellt, das heißt, dass die Seiten, welche nicht den Inhalt der Arbeit enthalten (Inhaltsverzeichnis, Abkürzungsverzeichnis, etc.) mit romanischen Zahlen gezählt werden und ab der Einleitung, bzw. dem ersten eigentlichen Kapitel, wird dann in arabischen Nummer weitergezählt. (Siehe Zeile 77 und Zeile 109)
 
@@ -37,28 +37,28 @@ Es empfiehlt sich die Bilder im Vorhinein so zu formatieren, dass das Bild keine
 
 Tabellen werden in LaTeX direkt erstellt, es empfiehlt sich dafür einen online LaTeX Tabelleneditor zu verwenden und den Code dann am jeweiligen Punkt einzufügen (https://www.latex-tables.com/). 
 
-Das Literaturverzeichnis befinden sich im Unterordner litrature und beinhaltet genau eine Datei mit dem Namen Literaturverzeichnis.bib.
+Das Literaturverzeichnis befindet sich im Unterordner litrature und beinhaltet genau eine Datei mit dem Namen Literaturverzeichnis.bib.
 In dieser Datei befinden sich alle Referenzen in dem BibLaTeX Format.
-Um die Referenzen in diesem Format einfach zu erhalten, empfiehlt sich ein Literaturprogramm wie z.B. Zotero oder Citavi, welche ihre Bibliotheken einfach in diesem Format exportieren können. Dabei ist es nicht relevant, ob in der Datei Referenzen vorkommen, die in der Arbeit nicht verwendet werden, da in dem Literaturverzeichnis nur diese Aufgeführt werden, welche auch in dem Text referenziert wurden.
+Um die Referenzen in diesem Format einfach zu erhalten, empfiehlt sich ein Literaturprogramm wie z.B. Zotero oder Citavi, welche die Bibliotheken einfach in diesem Format exportieren können. Dabei ist es nicht relevant, ob in der Datei Referenzen vorkommen, die in der Arbeit nicht verwendet werden, da in dem Literaturverzeichnis nur diese Aufgeführt werden, welche auch in dem Text referenziert wurden.
 
 Weiterführende ein paar der wichtigsten Kommandos in LaTeX und deren Funktion.
 1. ```\chapter{Name des Kapitels}``` -> Erstellt ein neues Kapitel
 2. ```\section{Name der Unterkapitels}``` -> Erstellt ein neues Unterkapitel
 3. ```\subsection{}``` -> Neues Unterunterkapitel
-4. ```\label{Name des Labels}``` -> ordnet ein Label zu, auf das man sich später beziehen kann
+4. ```\label{Name des Labels}``` -> Ordnet ein Label zu, auf das man sich später beziehen kann
 z.B.  
 ```\chapter{Einleitung}```  
 ```\label(chap\Einleitung)```   
 Hier wird ein Label: chap\Einleitung erstellt, so kann man im späteren Verlauf einfach auf dieses Kapitel referenzieren, indem man das Label verwendet.
 Label werden für alles erstellt: Kapitel, Unterkapitel, Bilder, Tabellen, usw. Kurz gesagt, alles worauf man in dem Text möglicherweise verweisen möchte, muss ein Label bekommen.
-5. ```\cite{Nambe der Referenz}``` -> erstellt eine Referenzierung
-6. ```\autoref{Name des Labels}``` -> erstellt eine Referenzierung zu einem Label
+5. ```\cite{Nambe der Referenz}``` -> Erstellt eine Referenzierung
+6. ```\autoref{Name des Labels}``` -> Erstellt eine Referenzierung zu einem Label
 7. ```\ac{}``` und ```\acp{}``` -> Fügt eine vorher definierte Abkürzung ein, sodass dies immer Einheitlich ist und auf das Abkürzungsverzeichnis referenziert.
 
-Hierzu muss die Abkürzung vorher in Abkürzungsverzeichnis.tex definiert werden (Beispiele wie das aussehen kann sind in der Datei enthalten)
+Hierzu muss die Abkürzung vorher im Abkürzungsverzeichnis.tex definiert werden (Beispiele wie das aussehen kann sind in der Datei enthalten)
 
 \acp{} fügt die Abkürzung als Plural ein
 
 
-Eine gute Einführung wie man Bilder ordentlich in LaTeX einfügt, findest du hier: https://www.learnlatex.org/de/lesson-07
+Eine gute Einführung wie man Bilder ordentlich in LaTeX einfügt findest du hier: https://www.learnlatex.org/de/lesson-07.
 Dort findet man darüber hinaus auch zu anderen Bereichen schnelle und übersichtliche Infos (ansonsten kann ChatGPT das im Großen und Ganzen auch alles).
